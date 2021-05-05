@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2G2-uX-opP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="TuJ-M2-Bc0">
+            <objects>
+                <viewController id="2G2-uX-opP" customClass="FirstViewController" customModule="WatchFaceTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xmM-Vo-lOn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2W-B6-fhf">
+                                <rect key="frame" x="130" y="144" width="154" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="028-Pw-K8L"/>
+                                    <constraint firstAttribute="height" constant="154" id="38v-Oo-bCF"/>
+                                </constraints>
+                                <state key="normal" image="camera" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="62"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseButtonAction:" destination="2G2-uX-opP" eventType="touchUpInside" id="nXf-pd-hcM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlq-Sh-hP0">
+                                <rect key="frame" x="100" y="359" width="214" height="30"/>
+                                <state key="normal" title="Создать"/>
+                                <connections>
+                                    <action selector="createButtonAction:" destination="2G2-uX-opP" eventType="touchUpInside" id="1PV-Fq-IVZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введи название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MG-Sl-yiP">
+                                <rect key="frame" x="90" y="431" width="234" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажмите на картинку, чтобы поменять" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6io-SD-b9g">
+                                <rect key="frame" x="33" y="91" width="348" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mbf-vS-xZD" firstAttribute="trailing" secondItem="Qlq-Sh-hP0" secondAttribute="trailing" constant="100" id="0KQ-Ib-DOW"/>
+                            <constraint firstItem="O2W-B6-fhf" firstAttribute="top" secondItem="6io-SD-b9g" secondAttribute="bottom" constant="30" id="2lM-Q0-Ree"/>
+                            <constraint firstItem="Qlq-Sh-hP0" firstAttribute="leading" secondItem="Mbf-vS-xZD" secondAttribute="leading" constant="100" id="6Wu-B0-byP"/>
+                            <constraint firstItem="7MG-Sl-yiP" firstAttribute="leading" secondItem="Mbf-vS-xZD" secondAttribute="leading" constant="90" id="AVc-eP-Zxn"/>
+                            <constraint firstItem="6io-SD-b9g" firstAttribute="centerX" secondItem="Mbf-vS-xZD" secondAttribute="centerX" id="JQa-ai-ZmL"/>
+                            <constraint firstItem="Mbf-vS-xZD" firstAttribute="trailing" secondItem="7MG-Sl-yiP" secondAttribute="trailing" constant="90" id="daL-ka-eIz"/>
+                            <constraint firstItem="Qlq-Sh-hP0" firstAttribute="top" secondItem="O2W-B6-fhf" secondAttribute="bottom" constant="61" id="evJ-bs-5WO"/>
+                            <constraint firstItem="O2W-B6-fhf" firstAttribute="top" secondItem="Mbf-vS-xZD" secondAttribute="top" constant="100" id="f7d-hp-rqa"/>
+                            <constraint firstItem="7MG-Sl-yiP" firstAttribute="top" secondItem="Qlq-Sh-hP0" secondAttribute="bottom" constant="42" id="jfF-NC-cr8"/>
+                            <constraint firstItem="O2W-B6-fhf" firstAttribute="centerX" secondItem="Mbf-vS-xZD" secondAttribute="centerX" id="wvT-kE-J2I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mbf-vS-xZD"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageButton" destination="O2W-B6-fhf" id="Ak6-0H-eQ7"/>
+                        <outlet property="textField" destination="7MG-Sl-yiP" id="cUv-QJ-Vcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HxZ-8G-dlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+    </resources>
+</document>

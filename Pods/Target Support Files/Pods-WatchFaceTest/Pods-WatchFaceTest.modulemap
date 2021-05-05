@@ -1,0 +1,6 @@
+framework module Pods_WatchFaceTest {
+  umbrella header "Pods-WatchFaceTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
